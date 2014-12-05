@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+html,
+body,
+iframe {
+    height: 100%;
+    width: 100%;
+}
+nav {
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+h1 {
+    margin-top: 180px;
+}
+nav,
+nav ul {
+    display: flex;
+}
+nav ul {
+    align-self: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    list-style-type: none;
+}
+nav ul li {
+    padding: 0 30px
+}
+header {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+section {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.promo {
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    margin: 20px 0;
+}
+figure img {
+    position: absolute;
+}

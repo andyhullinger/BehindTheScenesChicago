@@ -1,0 +1,149 @@
+@import url(http://fonts.googleapis.com/css?family=Nunito:300,700);
+@import url(http://fonts.googleapis.com/css?family=Iceberg);
+ body {
+    font-size: 18px;
+    font-family: 'Nunito', Helvetica;
+    font-weight: 300;
+}
+nav li {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 80%;
+}
+nav h2 {
+    font-size: 0;
+    colot: transparent;
+    height: 60px;
+    width: 200px;
+    background: url("http://www.medill.northwestern.edu/_internal/base-assets/images/logo/medill.png") center center no-repeat;
+}
+figcaption h2 {
+    font-size: 200%;
+    line-height: 90%;
+    margin-top: 50%;
+    color: white;
+    text-align: center;
+}
+figcaption h2::before {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    content: "story & code";
+    text-transform: uppercase;
+    font-size: 12px;
+    top: 0;
+    font-weight: 300;
+    letter-spacing: 3px;
+    line-height: 0px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: rgba(255, 255, 255, .4);
+    -webkit-transition: color 300ms;
+}
+li.selected {
+    color: rgba(255, 255, 255, .4);
+}
+/*designed elements - mostly parent containers*/
+
+#background-blur {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    background: url(../img/cover-background.jpg) top center no-repeat;
+    background-size: cover;
+}
+body#cover {
+    background: url(../img/cover-background-blur.jpg) top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+nav {
+    background: rgba(78, 1, 92, 1);
+    color: rgba(255, 255, 255, 0.8);
+}
+header h1 {
+    font-family: "Iceberg";
+    letter-spacing: -8px;
+    word-spacing: 20px;
+    color: rgba(158, 233, 255, 0.8);
+    text-shadow: 2px 2px 5px rgb(35, 47, 183);
+    text-align: center;
+    font-size: 8vw;
+    line-height: 8vw;
+}
+header h1 strong {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 5px rgba(35, 47, 183, .6);
+    font-size: 2.5em;
+    display: block;
+}
+header h2 {
+    color: white;
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 3em;
+    line-height: 2em;
+}
+footer {
+    background-color: rgba(0, 0, 0, .5);
+    border-top: 2px solid purple;
+    color: #666;
+    height: 200px;
+}
+footer img {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 100px;
+    width: 200px;
+    display: block;
+    float: left;
+}
+footer h3 {
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+/*caption special effect*/
+
+figure.captionSFX {
+    position: relative;
+    overflow: hidden;
+}
+figure.captionSFX figcaption::before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 2px solid #fff;
+    background-color: rgba(78, 1, 92, .6);
+    box-shadow: 0 0 0 30px rgba(0, 0, 0, .5);
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.4, 1.4, 1);
+    transform: scale3d(1.4, 1.4, 1);
+}
+figure.captionSFX h2 {
+    padding: 1em;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+figure.captionSFX:hover figcaption::before,
+figure.captionSFX:hover h2 {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
