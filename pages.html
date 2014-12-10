@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Mageractive Class Website</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/typography.css">
@@ -10,11 +11,11 @@
 
 <body>
     <nav>
-        <h2>company logo</h2>
+        <h2>Medill School of Journalism</h2>
         <ul>
-            <li><a href="index.html">Home</a>
+            <li class="selected">Volume One</li>
+            <li><a href="index.html">Index</a>
             </li>
-            <li class="selected">Pages</li>
             <li><a href="about.html">About</a>
             </li>
         </ul>
@@ -22,6 +23,34 @@
 
     <iframe src="http://codepen.io/mccirincione/full/cBguL" frameborder="0">
     </iframe>
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        //object to store links to pens
+        var classPens = {}
+
+        classPens["zachary"] = "http://codepen.io/ZacharyVasile2015/full/iJymG/";
+        classPens["elizabeth"] = "http://codepen.io/elizabethatkinson/full/zkmno/";
+        classPens["mary"] = "http://codepen.io/elizabethatkinson/full/zkmno/";
+
+         //used to parse the exta parameters sent in the URL to load the proper student's page frm the dictionary.
+        $.urlParam = function (name) {
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (results == null) {
+                return null;
+            } else {
+                return results[1] || 0;
+            }
+        }
+
+        var studentURL = classPens[$.urlParam('student')];
+        $("iframe").attr("src", studentURL);
+        $(".selected").text($.urlParam('student'));
+        alert(studentURL);
+    </script>
 
 </body>
 

@@ -17,14 +17,14 @@ nav h2 {
     width: 200px;
     background: url("http://www.medill.northwestern.edu/_internal/base-assets/images/logo/medill.png") center center no-repeat;
 }
-figcaption h2 {
+figcaption h3 {
     font-size: 200%;
     line-height: 90%;
     margin-top: 50%;
     color: white;
     text-align: center;
 }
-figcaption h2::before {
+figcaption h3::before {
     position: absolute;
     width: 100%;
     left: 0;
@@ -88,10 +88,6 @@ header h2 {
     font-family: Georgia;
     font-style: italic;
     font-weight: normal;
-    font-size: 3vw;
-    text-align: center;
-    margin-top: 3em;
-    line-height: 2em;
 }
 footer {
     background-color: rgba(0, 0, 0, .5);
@@ -113,8 +109,16 @@ footer h3 {
 }
 /*caption special effect*/
 
-figure.captionSFX {
+figure {
     position: relative;
+    overflow: hidden;
+    width: 300px;
+}
+figure figcaption {
+    position: absolute;
+    top: 0;
+    height: 400px;
+    width: 100%;
     overflow: hidden;
 }
 figure.captionSFX figcaption::before {
@@ -133,16 +137,18 @@ figure.captionSFX figcaption::before {
     -webkit-transform: scale3d(1.4, 1.4, 1);
     transform: scale3d(1.4, 1.4, 1);
 }
-figure.captionSFX h2 {
+figure.captionSFX h3 {
     padding: 1em;
+    width: 300px;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
     -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
     transform: scale(1.5);
 }
 figure.captionSFX:hover figcaption::before,
-figure.captionSFX:hover h2 {
+figure.captionSFX:hover h3 {
     opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
