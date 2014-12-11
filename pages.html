@@ -24,18 +24,51 @@
     <iframe src="http://codepen.io/mccirincione/full/cBguL" frameborder="0">
     </iframe>
 
-
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script>
-        //object to store links to pens
-        var classPens = {}
+        var classPens = {};
+        classPens["ea"] = "http://codepen.io/elizabethatkinson/full/zkmno";
+        classPens["tb"] = "http://codepen.io/tobiasburns/full/gsLdj";
+        classPens["mc"] = "http://codepen.io/mccirincione/full/cBguL";
+        classPens["ec"] = "http://codepen.io/ecortellessa/full/zxvaYz";
+        classPens["kd"] = "http://codepen.io/kdemps/full/Ceaml";
+        classPens["me"] = "http://codepen.io/MJEpstein/full/iIoKs";
+        classPens["sf"] = "http://codepen.io/sarafreund/full/uCoyL";
+        classPens["nh"] = "http://codepen.io/nah867/full/qBjsw";
+        classPens["ah"] = "http://codepen.io/adriennehurst/full/JbwiD";
+        classPens["aj"] = "http://codepen.io/amjohnson92/full/JHrey";
+        classPens["nk"] = "http://codepen.io/nkariuki/full/fvGzi";
+        classPens["hl"] = "http://codepen.io/hlafon/full/olHqu";
+        classPens["ml"] = "http://codepen.io/marylee/full/GuBtD/";
+        classPens["lx"] = "http://codepen.io/leixuan/full/mJzLq";
+        classPens["bm"] = "http://codepen.io/bmagee/full/upvJo";
+        classPens["lm"] = "http://codepen.io/lyndseymck/full/oysAh";
+        classPens["rs"] = "http://codepen.io/ramsen/full/dcntI";
+        classPens["zv"] = "http://codepen.io/ZacharyVasile2015/full/iJymG";
+        classPens["yw"] = "http://codepen.io/pennywang/full/kyrAf";
 
-        classPens["zachary"] = "http://codepen.io/ZacharyVasile2015/full/iJymG/";
-        classPens["elizabeth"] = "http://codepen.io/elizabethatkinson/full/zkmno/";
-        classPens["mary"] = "http://codepen.io/elizabethatkinson/full/zkmno/";
-
+        var classNames = {};
+        classNames["ea"] = "Elizabeth Atkinson";
+        classNames["tb"] = "Tobias Burns";
+        classNames["mc"] = "Mary Cirincione";
+        classNames["ec"] = "Eric Cortellessa";
+        classNames["kd"] = "Katherine Dempsey";
+        classNames["me"] = "Michael Epstein";
+        classNames["sf"] = "Sara Freund";
+        classNames["nh"] = "Nicholas Heinzmann";
+        classNames["ah"] = "Adrienne Hurst";
+        classNames["aj"] = "Alexandria Johnson";
+        classNames["nk"] = "Nicholas Kariuki";
+        classNames["hl"] = "Holly LaFon";
+        classNames["ml"] = "Mary Lee";
+        classNames["lx"] = "Xuan Lei";
+        classNames["bm"] = "Brittany Magee";
+        classNames["lm"] = "Lyndsey McKenna";
+        classNames["rs"] = "Ramsen Shamon";
+        classNames["zv"] = "Zachary Vasile";
+        classNames["yw"] = "Yi Wang";
+        
          //used to parse the exta parameters sent in the URL to load the proper student's page frm the dictionary.
         $.urlParam = function (name) {
             var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
@@ -45,11 +78,10 @@
                 return results[1] || 0;
             }
         }
-
-        var studentURL = classPens[$.urlParam('student')];
-        $("iframe").attr("src", studentURL);
-        $(".selected").text($.urlParam('student'));
-        alert(studentURL);
+        var studentURL = classPens[$.urlParam("student")];
+        var studentName = classNames[$.urlParam("student")];
+        $("iframe ").attr("src", studentURL);
+        $(".selected ").text(studentName);
     </script>
 
 </body>

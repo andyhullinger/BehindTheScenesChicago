@@ -10,8 +10,8 @@ figure span {
 }
 /* elizabeth */
 
-.ea h1,
-.ea h2 {
+#ea h1,
+#ea h2 {
     font-family: Georgia;
     font-size: 34px;
     line-height: 33px;
@@ -19,7 +19,7 @@ figure span {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .8);
 }
-.ea h1 {
+#ea h1 {
     color: #f2bd78;
     font-size: 40px;
     line-height: 34px;
@@ -27,12 +27,56 @@ figure span {
     left: 20px;
     top: 200px;
 }
-.ea h2 {
+#ea h2 {
     top: 300px;
     left: 20px;
 }
-.ea img {
+#ea img {
     width: 600px;
     height: 400px;
     right: 0;
+}
+/* toby */
+
+#tb img {
+    left: -10px;
+    top: -120px;
+}
+#tb h1 {
+    font-size: 120px;
+    font-weight: normal;
+    font-family: 'Anton', sans-serif;
+    color: red;
+    opacity: .8;
+    letter-spacing: -5px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    text-shadow: 4px 4px black;
+    top: 50px;
+}
+#tb h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    line-height: 40px;
+    color: white;
+    text-shadow: 4px 4px black;
+}
+#tb h2 {
+    left: 130px;
+}
+#tb .the {
+    top: 20px;
+}
+#tb .art {
+    top: 60px;
+}
+#tb .of {
+    top: 100px;
+}
+#tb .winning {
+    top: 140px;
+}
+#tb .argument {
+    top: 180px;
 }
