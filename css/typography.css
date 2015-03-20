@@ -91,8 +91,8 @@ header h2 {
     font-weight: normal;
 }
 footer {
-    background-color: rgba(0, 0, 0, .5);
-    border-top: 2px solid purple;
+    background-color: rgba(92, 38, 165, 0.5);
+    border-top: 2px solid #931493;
     color: #666;
     height: 200px;
 }

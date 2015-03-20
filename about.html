@@ -9,13 +9,22 @@
     <link rel="stylesheet" href="css/typography.css">
     <style>
     article{width: 70%; margin:auto; margin-top: 100px;}
-        article p{font-size: 130%;margin-bottom: 30px;}
-        section{display:flex;margin-left: 0;}
-        section ol{list-style-position: inside;}
-        section h2{font-weight: 300;color:purple;margin-bottom: 4px;margin-top: 20px;}
-        section a:link{text-decoration:underline; color:#3d47c7;}
-        section a:visited{text-decoration:none; color:#999;}
-        footer{background-color:white; margin-top: 100px;}
+    article p{font-size: 130%;margin-bottom: 30px;}
+    section{display: block;-webkit-columns:3;}
+    section ol{list-style-position: inside;
+    
+    
+    
+    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+          page-break-inside: avoid; /* Firefox */
+               break-inside: avoid; /* IE 10+ */
+
+    }
+    section h2{font-weight: 300;color:purple;margin-bottom: 4px;margin-top: 20px;}
+    section h2:nth-of-type(1){margin-top: 0;}
+    section a:link{text-decoration:underline; color:#3d47c7;}
+    section a:visited{text-decoration:none; color:#999;}
+    footer{background-color:white; margin-top: 100px;}
 
        
         
@@ -39,7 +48,6 @@
         <h1>About The Project</h1>
         <p>A showcase of the writing and coding skills exercised by Medill graduate students in the Fall 2014 JOUR 490 <em>Special Topics: Magazine &amp; Interactive Journalism</em> course.</p>
         <section>
-        <div>
 <h2>Elizabeth Atkinson</h2>
 <ol>
     <li class="story"><a href="http://codepen.io/elizabethatkinson/full/zkmno">short form article</a>
@@ -95,8 +103,9 @@
     </li>
 </ol>
 
-<h2>Sara Freund</h2>
+
 <ol>
+    <li><h2>Sara Freund</h2></li>
     <li class="story"><a href="http://codepen.io/sarafreund/full/uCoyL">short form article</a>
     </li>
     <li class="qa"><a href="http://codepen.io/sarafreund/full/OPLvWa/">question &amp; answer</a>
@@ -104,7 +113,6 @@
     <li class="infographic"><a href="http://codepen.io/sarafreund/full/zxGrLd">interactive infographic</a>
     </li>
 </ol>
-</div><div>
 <h2>Nicholas Heinzmann</h2>
 <ol>
     <li class="story"><a href="http://codepen.io/nah867/full/qBjsw/">short form article</a>
@@ -120,7 +128,7 @@
     </li>
     <li class="qa"><a href="http://codepen.io/adriennehurst/full/zjvHh/">question &amp; answer</a>
     </li>
-    <li class="infographic"><a href="http://codepen.io/adriennehurst/full/GgpoYw">interactive infographic</a>
+    <li class="infographic"><a href="http://www.codingforcreatives.com/mageractive/behindthescenes/nick_soccerinfographic/index.html">interactive infographic</a>
     </li>
 </ol>
 <h2>Alexandria Johnson</h2>
@@ -169,7 +177,6 @@
     <li class="infographic"><a href="http://codepen.io/leixuan/full/PwPaqg">interactive infographic</a>
     </li>
 </ol>
- </div><div>
 <h2>Brittany Magee</h2>
 <ol>
     <li class="story"><a href="http://codepen.io/bmagee/full/upvJo">short form article</a>
@@ -214,7 +221,6 @@
     </li>
     <li class="infographic"><a href="http://codepen.io/pennywang/full/jEOoBY">interactive infographic</a>
     </li>
-      </div>
        </section> 
     </article>
         <footer>
